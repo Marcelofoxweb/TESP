@@ -22,6 +22,18 @@ public class Aluno extends Pessoa {
 	}
 
 	
+	public static boolean verificaMatricula(String matricula) {
+		if (matricula == null) {
+			return false;
+		} else if (matricula.trim().equals("")){
+			return false;
+		} else if (matricula.length() != 8){
+			return false;
+		}
+		return true;
+		
+	}
+	
 	//Esse método é "Sobrecarga"
 	public Aluno(Long matricula, String nome) {
 		super(nome, null);

@@ -19,7 +19,9 @@ public class Teste1b {
 		Aluno a3 = new Aluno(333333L, "Tiago");		
 		Professor p1 = new Professor("Joao", "123456", new BigDecimal(123456));
 		Professor p2 = new Professor("Joao", "123456");
-
+		
+		
+		
 		
 		//Exibir na tela (imprimir)
 		System.out.println(a1);
@@ -28,5 +30,10 @@ public class Teste1b {
 		System.out.println(p1);
 		System.out.println(p2);
 		
+		// Variável de classe
+		System.out.println("BONUS ======="+Professor.BONUS);
+		
+		// Metodo de classe
+		System.out.println(Aluno.verificaMatricula("12345678"));
 	}
 }
