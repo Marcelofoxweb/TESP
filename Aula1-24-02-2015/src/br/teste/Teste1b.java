@@ -30,10 +30,10 @@ public class Teste1b {
 		System.out.println(p1);
 		System.out.println(p2);
 		
-		// Variável de classe
+		// Variável de classe. Chamando a variável de classe para imprimir
 		System.out.println("BONUS ======="+Professor.BONUS);
 		
-		// Metodo de classe
+		// Metodo de classe. Chamando o metodo de classe para imprimir
 		System.out.println(Aluno.verificaMatricula("12345678"));
 	}
 }

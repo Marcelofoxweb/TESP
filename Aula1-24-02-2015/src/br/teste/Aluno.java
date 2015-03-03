@@ -21,7 +21,7 @@ public class Aluno extends Pessoa {
 		this.matricula = matricula;
 	}
 
-	
+	// Método de classe
 	public static boolean verificaMatricula(String matricula) {
 		if (matricula == null) {
 			return false;
@@ -31,7 +31,6 @@ public class Aluno extends Pessoa {
 			return false;
 		}
 		return true;
-		
 	}
 	
 	//Esse método é "Sobrecarga"

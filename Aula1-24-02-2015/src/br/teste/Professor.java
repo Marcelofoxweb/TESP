@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Professor extends Pessoa {
 	
 	private BigDecimal salario;
-	public static Double BONUS = 0.1D;
+	public static Double BONUS = 0.1D; // Variável de classe
 
 	
 	public Professor(String nome, String cpf, BigDecimal salario) {
