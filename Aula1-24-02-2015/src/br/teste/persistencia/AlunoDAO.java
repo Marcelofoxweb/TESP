@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.teste.entidade.Aluno;
 
-public class AluoDAO implements DAO<Aluno, Long> {
+public class AlunoDAO implements DAO<Aluno, Long> {
 
 	@Override
 	public Aluno find(Long id) {
