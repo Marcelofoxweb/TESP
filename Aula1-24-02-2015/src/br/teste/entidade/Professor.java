@@ -1,4 +1,4 @@
-package br.teste;
+package br.teste.entidade;
 
 import java.math.BigDecimal;
 
@@ -8,14 +8,14 @@ public class Professor extends Pessoa {
 	public static Double BONUS = 0.1D; // Variável de classe
 
 	
-	public Professor(String nome, String cpf, BigDecimal salario) {
-		super(nome, cpf);
+	public Professor(Long id, String nome, String cpf, BigDecimal salario) {
+		super(id, nome, cpf);
 		this.salario = salario;
 	}
 	
 
-	public Professor(String nome, String cpf) {
-		super(nome, cpf);
+	public Professor(Long id, String nome, String cpf) {
+		super(id, nome, cpf);
 	}
 
 

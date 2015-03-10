@@ -1,4 +1,4 @@
-package br.teste;
+package br.teste.entidade;
 
 import java.util.Date;
 
@@ -8,16 +8,16 @@ public class Aluno extends Pessoa {
 
 	
 	
-	public Aluno(Long matricula, String nome, String cpf, Date dataAnivarsario) {
-		super(nome, cpf);
+	public Aluno(Long id, Long matricula, String nome, String cpf, Date dataAnivarsario) {
+		super(id, nome, cpf);
 		this.matricula = matricula;
 		this.dataAnivarsario = dataAnivarsario;
 	}
 
 	
 	//Esse método é "Sobrecarga" 	
-	public Aluno(Long matricula, String nome, String cpf) {
-		super(nome, cpf);
+	public Aluno(Long id, Long matricula, String nome, String cpf) {
+		super(id, nome, cpf);
 		this.matricula = matricula;
 	}
 
@@ -34,8 +34,8 @@ public class Aluno extends Pessoa {
 	}
 	
 	//Esse método é "Sobrecarga"
-	public Aluno(Long matricula, String nome) {
-		super(nome, null);
+	public Aluno(Long id, Long matricula, String nome) {
+		super(id, nome, null);
 		this.matricula = matricula;
 	}
 
