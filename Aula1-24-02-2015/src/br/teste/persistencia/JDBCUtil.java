@@ -10,7 +10,7 @@ public class JDBCUtil {
 	public static Connection getConnection() throws Exception {
 		if (con == null || con.isClosed()){
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/UNIBH", " ", " ");
+			con = DriverManager.getConnection("jdbc:mysql://localhost/UNIBH", "unibh", "1234");
 		}
 		return con;
 	}
