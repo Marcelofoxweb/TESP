@@ -1,12 +1,12 @@
-package br.teste;
+package br.unibh;
 
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.util.Date;
 
-import br.teste.entidade.Aluno;
-import br.teste.entidade.Professor;
-import br.teste.persistencia.JDBCUtil;
+import br.unibh.entidade.Aluno;
+import br.unibh.entidade.Professor;
+import br.unibh.persistencia.JDBCUtil;
 
 public class Teste1b {
 

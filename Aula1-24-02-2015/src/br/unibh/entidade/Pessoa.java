@@ -1,4 +1,4 @@
-package br.teste.entidade;
+package br.unibh.entidade;
 
 public abstract class Pessoa {
 

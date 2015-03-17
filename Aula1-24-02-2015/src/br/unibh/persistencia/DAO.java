@@ -1,4 +1,4 @@
-package br.teste.persistencia;
+package br.unibh.persistencia;
 
 import java.util.List;
 

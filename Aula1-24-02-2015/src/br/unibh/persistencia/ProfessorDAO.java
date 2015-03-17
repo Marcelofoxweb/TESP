@@ -1,37 +1,37 @@
-package br.teste.persistencia;
+package br.unibh.persistencia;
 
 import java.util.List;
 
-import br.teste.entidade.Aluno;
+import br.unibh.entidade.Professor;
 
-public class AlunoDAO implements DAO<Aluno, Long> {
+public class ProfessorDAO implements DAO<Professor, Long> {
 
 	@Override
-	public Aluno find(Long id) {
+	public Professor find(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void insert(Aluno t) {
+	public void insert(Professor t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void update(Aluno t) {
+	public void update(Professor t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete(Aluno t) {
+	public void delete(Professor t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Aluno> findAll() {
+	public List<Professor> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

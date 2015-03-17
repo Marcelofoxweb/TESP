@@ -1,4 +1,4 @@
-package br.teste;
+package br.unibh;
 
 public class Teste1a {
 	public static void main(String[] args) {
