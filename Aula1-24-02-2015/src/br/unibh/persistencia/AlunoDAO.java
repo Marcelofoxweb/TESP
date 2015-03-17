@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.Types;
 import java.text.SimpleDateFormat;
 import java.util.List;
-
 import br.unibh.entidade.Aluno;
+
 
 public class AlunoDAO implements DAO<Aluno, Long> {
 
@@ -60,9 +60,27 @@ public class AlunoDAO implements DAO<Aluno, Long> {
 		}	
 	}
 
+	
 	@Override
 	public void update(Aluno t) {
 		// TODO Auto-generated method stub
+		try {
+		PreparedStatement p = JDBCUtil.getConnection().
+		prepareStatement("update tb_aluno (matricula, nome, cpf, data_aniversario) values (?,?,?,?)");
+		p.setLong(1,  t.getMatricula());
+		p.setString(2, t.getNome());
+		p.setString(3, t.getCpf());
+		if (t.getDataAniversario()==null){
+				p.setNull(4,  Types.NULL);
+		}else{
+			p.setString(4, df.format(t.getDataAniversario()));
+		}
+		p.executeUpdate();
+		JDBCUtil.closedConnection();
+		}catch (Exception e){
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 		
 	}
 

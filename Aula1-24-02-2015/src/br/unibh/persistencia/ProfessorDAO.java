@@ -3,7 +3,6 @@ package br.unibh.persistencia;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
-
 import br.unibh.entidade.Professor;
 
 
@@ -30,7 +29,8 @@ public class ProfessorDAO implements DAO<Professor, Long> {
 	public void insert(Professor t) {
 		// TODO Auto-generated method stub
 		try {
-			PreparedStatement p = JDBCUtil.getConnection().prepareStatement("insert into tb_professor (nome, cpf, salario) values (?, ?, ?)");
+			PreparedStatement p = JDBCUtil.getConnection().
+			prepareStatement("insert into tb_professor (nome, cpf, salario) values (?, ?, ?)");
 			p.setString(1, t.getNome());
 			p.setString(2, t.getCpf());
 			p.setBigDecimal(3, t.getSalario());
@@ -44,6 +44,18 @@ public class ProfessorDAO implements DAO<Professor, Long> {
 
 	public void update(Professor t) {
 		// TODO Auto-generated method stub
+		try {
+			PreparedStatement p = JDBCUtil.getConnection().
+			prepareStatement("update tb_professor (nome, cpf, salario) values (?, ?, ?)");
+			p.setString(1, t.getNome());
+			p.setString(2, t.getCpf());
+			p.setBigDecimal(3, t.getSalario());
+			p.executeUpdate();
+			JDBCUtil.closedConnection();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
