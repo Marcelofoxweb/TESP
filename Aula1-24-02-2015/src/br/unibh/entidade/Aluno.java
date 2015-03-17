@@ -4,14 +4,14 @@ import java.util.Date;
 
 public class Aluno extends Pessoa {
 	private Long matricula;
-	private Date dataAnivarsario;
+	private Date dataAniversario;
 
 	
 	
-	public Aluno(Long id, Long matricula, String nome, String cpf, Date dataAnivarsario) {
+	public Aluno(Long id, Long matricula, String nome, String cpf, Date dataAniversario) {
 		super(id, nome, cpf);
 		this.matricula = matricula;
-		this.dataAnivarsario = dataAnivarsario;
+		this.dataAniversario = dataAniversario;
 	}
 
 	
@@ -50,28 +50,21 @@ public class Aluno extends Pessoa {
 	}
 
 
-	public Date getDataAnivarsario() {
-		return dataAnivarsario;
+	public Date getDataAniversario() {
+		return dataAniversario;
 	}
 
 
-	public void setDataAnivarsario(Date dataAnivarsario) {
-		this.dataAnivarsario = dataAnivarsario;
+	public void setDataAnivarsario(Date dataAniversario) {
+		this.dataAniversario = dataAniversario;
 	}
 
 
 	@Override
 	public String toString() {
 		return super.toString() 
-				+ "Aluno [matricula=" + matricula + ", dataAnivarsario="
-				+ dataAnivarsario + "]";
+				+ "Aluno [matricula=" + matricula + ", dataAniversario="
+				+ dataAniversario + "]";
 	}
-	
-	
-
-
-
-	
-	
 	
 }

@@ -25,7 +25,7 @@ public class AlunoDAO implements DAO<Aluno, Long> {
 					r.getLong("matricula"),
 					r.getString("nome"),
 					r.getString("cpf"),
-					r.getString("data_anivarsario")==null?
+					r.getString("data_aniversario")==null?
 							null:
 							df.parse(r.getString("data_aniversario"))
 					);
@@ -47,10 +47,10 @@ public class AlunoDAO implements DAO<Aluno, Long> {
 		p.setLong(1,  t.getMatricula());
 		p.setString(2, t.getNome());
 		p.setString(3, t.getCpf());
-		if (t.getDataAnivarsario()==null){
+		if (t.getDataAniversario()==null){
 				p.setNull(4,  Types.NULL);
 		}else{
-			p.setString(4, df.format(t.getDataAnivarsario()));
+			p.setString(4, df.format(t.getDataAniversario()));
 		}
 		p.executeUpdate();
 		JDBCUtil.closedConnection();
