@@ -71,7 +71,6 @@ public class Testes {
 	}
 
 	
-	
 	@Test
 	public void testeExcluirAluno(){
 		AlunoDAO dao = new AlunoDAO();
@@ -102,8 +101,8 @@ public class Testes {
 	@Test
 	public void testeProfessorFind(){
 		ProfessorDAO dao = new ProfessorDAO();
-		Professor a1 = dao.find(1L);
-		Assert.assertEquals(a1.getCpf(), "7445");
+		Professor a1 = dao.find("7445");
+		Assert.assertEquals(a1.getNome(), "Leocardio");
 	}
 	
 	
@@ -116,16 +115,17 @@ public class Testes {
 		dao.insert(a2);
 	}
 	
-	
 	@Test
 	public void professorUpdate(){
 		ProfessorDAO dao = new ProfessorDAO();
-		Professor a = dao.find(1L);
-		a.setNome("Teste");
-		a.setCpf("7445");
-		a.setSalario(new BigDecimal(2000));
-		dao.update(a);
+		Professor a1 = dao.find("7445");
+		//a1.setCpf("7446");
+		dao.update(a1);
+		//Professor a2 = dao.find(1L);
+		//Assert.assertEquals(a2.getNome(), "Leocardio");
 	}	
+
+	
 	
 	@Test
 	public void professorDelete(){
@@ -140,7 +140,7 @@ public class Testes {
 	public void professorTodos(){
 		ProfessorDAO dao = new ProfessorDAO();
 		List<Professor> listas = dao.findAll();
-		Assert.assertEquals(listas.size(), 3);
+		Assert.assertEquals(listas.size(), 2);
 	}
 	
 	
