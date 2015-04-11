@@ -19,7 +19,7 @@ public class Aluno extends Pessoa implements Serializable{
 
 	@NotBlank
 	@Size(min = 8, max = 8)
-	@Pattern(regexp = "[0-9]*", message = "Informar somente números")
+	@Pattern(regexp = "[0-9]*", message = "Informar apenas números.")
 	@Column(nullable = false)
 	private Long matricula;
 	
